@@ -8,7 +8,7 @@ A simple Chrome extension that converts **currencies and units** on the fly. Bui
 This extension was developed as part of our class project to learn more about **browser extensions and real-world applications** of JavaScript. Our goal was to create a **lightweight, user-friendly tool** that can handle both **currency and unit conversions** in one place.  
 
 It supports:  
-✅ **Real-time currency exchange rates** (USD, EUR, GBP, CNY, JPY)  
+✅ **Real-time currency exchange rates** (USD, CNY, EUR, GBP, JPY, CAD, AUD, INR, CHF, MXN, KRW)  
 ✅ **Length conversions** (meters, kilometers, miles, feet)  
 ✅ **Weight conversions** (grams, kilograms, pounds, ounces)  
 ✅ **A simple, easy-to-use interface**  

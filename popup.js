@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const resultDisplay = document.getElementById("result");
 
     const units = {
-        currency: ["USD", "CNY", "EUR", "GBP", "JPY"],
+        currency: ["USD", "CNY", "EUR", "GBP", "JPY", "CAD", "AUD", "INR", "CHF", "MXN", "KRW"],
         length: ["meters", "kilometers", "miles", "feet"],
         weight: ["grams", "kilograms", "pounds", "ounces"]
     };
@@ -63,7 +63,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 weight: { grams: 1, kilograms: 0.001, pounds: 0.0022, ounces: 0.0353 }
             };
             let result = value * (conversionRates[conversionTypeValue][to] / conversionRates[conversionTypeValue][from]);
-            resultDisplay.textContent = result.toFixed(2);
+            resultDisplay.textContent = `${value} ${from} = ${result.toFixed(2)} ${to}`;
+            //resultDisplay.textContent = result.toFixed(2);
         }
     });
 

@@ -7,77 +7,125 @@
     <title>Converter</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            width: 320px;
-            padding: 15px;
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 380px;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
         h3 {
             text-align: center;
-            margin-bottom: 15px;
-            color: #333;
+            margin-bottom: 20px;
+            color: #343a40;
+            font-size: 22px;
         }
 
-        select, input, button {
-            width: 100%;
-            margin-top: 8px;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
+        .section {
+            margin-bottom: 16px;
+        }
+
+        .section label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
             font-size: 14px;
         }
 
-        input {
-            background: #fff;
+        select, input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 14px;
+            border: 1px solid #ced4da;
+            background-color: #ffffff;
+        }
+
+        .row {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .row select {
+            flex: 1;
         }
 
         button {
-            background: #007BFF;
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
             color: white;
             font-weight: bold;
+            font-size: 15px;
             border: none;
+            border-radius: 8px;
             cursor: pointer;
-            transition: 0.3s;
+            transition: background-color 0.3s ease;
         }
 
         button:hover {
-            background: #0056b3;
+            background-color: #0056b3;
         }
 
         h4 {
             text-align: center;
-            margin-top: 10px;
-            color: #333;
+            margin-top: 25px;
+            font-size: 16px;
+            color: #444;
         }
 
         #result {
-            font-size: 18px;
+            font-size: 20px;
+            color: #28a745;
             font-weight: bold;
-            color: #28A745;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h3>Currency & Unit Converter</h3>
-        <select id="conversion-type">
-            <option value="currency">Currency</option>
-            <option value="length">Length</option>
-            <option value="weight">Weight</option>
-        </select>
-        
-        <input type="number" id="amount" placeholder="Enter value">
-        
-        <select id="from-unit"></select>
-        <select id="to-unit"></select>
-        
+
+        <div class="section">
+            <label for="conversion-type">Conversion Type</label>
+            <select id="conversion-type">
+                <option value="currency">Currency</option>
+                <option value="length">Length</option>
+                <option value="weight">Weight</option>
+            </select>
+        </div>
+
+        <div class="section">
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" placeholder="Enter value">
+        </div>
+
+        <div class="section">
+            <label>From / To</label>
+            <div class="row">
+                <select id="from-unit"></select>
+                <select id="to-unit"></select>
+            </div>
+        </div>
+
         <button id="convert">Convert</button>
-        
+
         <h4>Result: <span id="result">0</span></h4>
     </div>
 
     <script src="popup.js"></script>
 </body>
+</html>
